@@ -33,7 +33,8 @@ export function AuthProvider({ children }) {
   const value = {
     currentUser,
     signInWithGoogle,
-    logout
+    logout,
+    loading,
   };
 
   return (

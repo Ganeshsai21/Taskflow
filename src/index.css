@@ -34,3 +34,205 @@
     text-wrap: balance;
   }
 }
+
+/* Mobile-first responsive design */
+@media (max-width: 767px) {
+  /* Ensure proper mobile layout */
+  .mobile-layout {
+    display: block;
+  }
+  
+  .desktop-layout {
+    display: none;
+  }
+  
+  /* Mobile task grid - vertical scrolling */
+  .mobile-tasks-container {
+    height: calc(100vh - 280px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Mobile stats grid */
+  .mobile-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+  }
+  
+  /* Mobile filter modal */
+  .mobile-filter-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .mobile-filter-content {
+    position: fixed;
+    inset-y: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  }
+  
+  /* Touch-friendly button sizes */
+  button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Improved touch targets */
+  .filter-button {
+    padding: 0.75rem;
+    min-height: 48px;
+  }
+}
+
+@media (min-width: 768px) {
+  /* Desktop layout */
+  .mobile-layout {
+    display: none;
+  }
+  
+  .desktop-layout {
+    display: flex;
+    height: 100vh;
+  }
+  
+  /* Desktop sidebar */
+  .desktop-sidebar {
+    width: 320px;
+    flex-shrink: 0;
+    overflow-y: auto;
+  }
+  
+  /* Desktop main content */
+  .desktop-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  /* Desktop tasks content */
+  .desktop-tasks-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 2rem;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Desktop task grid */
+  .desktop-task-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+}
+
+/* Tablet adjustments */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .desktop-sidebar {
+    width: 280px;
+  }
+  
+  .desktop-task-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+  }
+}
+
+/* Large desktop adjustments */
+@media (min-width: 1025px) {
+  .desktop-task-grid {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles for accessibility */
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+  .mobile-layout,
+  .desktop-layout {
+    display: block !important;
+  }
+  
+  .desktop-sidebar,
+  .mobile-filter-modal,
+  button {
+    display: none !important;
+  }
+  
+  .desktop-main,
+  .mobile-tasks-container {
+    overflow: visible !important;
+    height: auto !important;
+  }
+  
+  .task-card {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #000;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .task-card {
+    border-width: 2px;
+  }
+  
+  button {
+    border: 2px solid currentColor;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Dark mode support (if needed in future) */
+@media (prefers-color-scheme: dark) {
+  /* Dark mode styles can be added here */
+}
