@@ -1,8 +1,27 @@
-# React + Vite
+# 📝 TaskFlow – Smart Task Manager
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+TaskFlow is a responsive and user-friendly task management web application built with **React**, **Firebase Authentication**, and **Firestore**. Users can sign up, log in, and manage their own tasks with features like filtering, sorting, and mobile-friendly UI.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🔐 User authentication (Sign Up / Login with Firebase)
+- ✅ Create, edit, delete, and toggle tasks
+- 🎯 Filter by status, priority, and category
+- 📊 Real-time task stats (Total, Completed, Active, High Priority)
+- 📱 Responsive layout with mobile-specific drawer filter
+- 🧠 Intuitive and minimal UI
+
+## 📸 Screenshots
+
+<img src="./screenshots/desktop.png" width="800" alt="Desktop UI" />
+<img src="./screenshots/mobile.png" width="300" alt="Mobile UI" />
+
+## 🛠️ Tech Stack
+
+- **React + Vite**
+- **TailwindCSS**
+- **Firebase (Auth + Firestore)**
+- **Lucide Icons**
+
+## 📂 Project Structure
+
