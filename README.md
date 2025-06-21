@@ -12,9 +12,7 @@ TaskFlow is a responsive and user-friendly task management web application built
 - 🧠 Intuitive and minimal UI
 
 ## 📸 Screenshots
-
-<img src="./screenshots/desktop.png" width="800" alt="Desktop UI" />
-<img src="./screenshots/mobile.png" width="300" alt="Mobile UI" />
+![Screenshot 2025-06-21 113603](https://github.com/user-attachments/assets/19aac76e-a297-4c24-af5b-481c812b82f5)
 
 ## 🛠️ Tech Stack
 
