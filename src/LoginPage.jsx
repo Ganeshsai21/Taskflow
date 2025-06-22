@@ -74,7 +74,7 @@ const LoginPage = () => {
           <p className="text-gray-600">or</p>
           <button
             onClick={handleGoogleSignIn}
-            className="flex items-center gap-3 px-6 py-3 border border-gray-300 rounded-md shadow-sm hover:shadow-md bg-white text-gray-700 font-medium mt-6 ms-18"
+            className="flex items-center gap-3 px-4 py-3 border border-gray-300 rounded-md shadow-sm hover:shadow-md bg-white text-gray-700 font-medium mt-6 ms-18"
           >
             <img
               src="https://developers.google.com/identity/images/g-logo.png"
